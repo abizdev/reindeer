@@ -1,3 +1,4 @@
+const tl = gsap.timeline({defaults: {duration: 1}})
 TweenMax.to(".overlay h1", 2, {
   opacity: 0,
   y: -60,
@@ -48,13 +49,19 @@ TweenMax.from(".logo", 1, {
   ease: Expo.easeInOut
 })
 
-TweenMax.staggerFrom(".menu-links ul li", 1, {
+// TweenMax.staggerFrom(".menu-links ul li", 1, {
+//   delay: 3.2,
+//   opacity: 0,
+//   x: -100,
+//   ease: Expo.easeInOut
+// }, 0.08)
+tl.to('.menu-links ul li', {
+  opacity: 1,
+  x: '0%',
   delay: 3.2,
-  opacity: 0,
-  x: -100,
-  ease: Expo.easeInOut
-}, 0.08)
-
+  ease: Expo.easeInOut,
+  stagger: 0.08
+})
 TweenMax.from(".scrolldown", 1, {
   delay: 2.6,
   opacity: 0,

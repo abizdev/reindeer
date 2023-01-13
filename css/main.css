@@ -54,6 +54,8 @@ body {
   text-transform: uppercase;
   cursor: pointer;
   transition: .3s ease-out;
+  transform: translateX(-100%);
+  opacity: 0;
 }
 .menu-links li:hover {
   background: #494949;
@@ -167,7 +169,7 @@ body {
   height: 93%;
   border-style: solid;
   border-width: 10px;
-  border-color: #ffeb00 transparent;
+  border-color: #ffeb00 #ffffff;
   transform: rotate(-45deg);
   top: 12px;
   left: 12px;
@@ -178,6 +180,7 @@ body {
   width: 64px;
   height: 64px;
   border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
   position: absolute;
 }
 .circle1 {
@@ -205,6 +208,7 @@ body {
   width: 12px;
   height: 12px;
   background: #ffffff;
+  z-index: 1;
 }
 .circle1::after,
 .circle2::after {
@@ -235,6 +239,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 99999999;
 }
 .overlay h1 {
   font-size: 100px;
