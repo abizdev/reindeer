@@ -213,7 +213,7 @@ body {
 }
 .circle1::before,
 .circle1::after,
-.circle2::before
+.circle2::before,
 .circle2::after {
   content: '';
   position: absolute;
