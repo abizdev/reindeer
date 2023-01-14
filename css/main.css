@@ -4,6 +4,14 @@
   list-style: none;
   text-decoration: none;
 }
+*::before, 
+*::after {
+  font-family: 'icons';
+}
+.icon-play::before {content: '\f04b'; font-weight: 400;}
+.icon-facebook::before {content: '\f39e'; font-weight: 400;}
+.icon-twitter::before {content: '\f099'; font-weight: 400;}
+.icon-instagram::before {content: '\f16d'; font-weight: 400;}
 body {
   width: 100px;
   height: 100vh;
@@ -98,6 +106,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+.watchnow::before {
+  margin-right: 20px;
+}
 .watchnow a {
   color: #000000;
   font-size: 20px;
@@ -106,10 +117,12 @@ body {
   border-bottom: 3px solid #000000;
   padding-bottom: 5px;
 }
-.fa-play {
+.icon-play::before,
+.icon-facebook::before,
+.icon-twitter::before,
+.icon-instagram::before {
   color: #ffffff;
   font-size: 30px;
-  margin-right: 20px;
   cursor: pointer;
 }
 .media {
@@ -124,10 +137,17 @@ body {
   gap: 20px;
 }
 .media li {
+  width: 40px;
+  height: 40px;
   font-size: 20px;
-  color: #494949;
   cursor: pointer;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.media li::before {
+  color: #494949;
 }
 .media li:hover {
   background: #ffeb00;
